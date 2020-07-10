@@ -1,0 +1,60 @@
+.card {
+    position: relative;
+    height: 480px;
+    overflow: hidden;
+    padding: 20px 60px 0 45px;
+    background: $light-gray;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 10px;
+    clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
+
+    &__prev-text {
+        @include font-source(16px, 400, $gray);
+        margin-bottom: 4px;
+    }
+
+    &__title {
+        @include font-source(48px, 700, $black);
+        line-height: 1.2;
+    }
+
+    &__subtitle {
+        @include font-source(24px, 700, $black);
+        margin-bottom: 5px;
+    }
+
+    &__desc {
+        @include font-source(14px, 400, $gray);
+    }
+
+    &__icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        z-index: 10;
+        right: 13px;
+        bottom: 16px;
+        width: 81px;
+        height: 81px;
+        background-color: $blue;
+        border-radius: 50%;
+    }
+
+    &__weight {
+        @include font-source(42px, 400, $white, 1);
+    }
+
+    &__weight-kg {
+        @include font-source(21px, 400, $white, 1);
+    }
+
+    &__pic {
+        position: absolute;
+        bottom: -2px;
+        left: -2px;
+        width: 320px;
+    }
+}

@@ -1,0 +1,42 @@
+-
+	var cards = [
+		{ prev: 'Сказочное заморское яство',
+			title: 'Нямушка',
+			subtitle: 'с фуа-гра',
+			desc: { item1: '10 порций', item2: 'мышь в подарок'},
+			weight: '0,5',
+			weightkg: 'кг',
+			pic: {src: './img/cat.png', alt: 'Фотография кошки'}
+		},
+		{
+			prev: 'Сказочное заморское яство',
+			title: 'Нямушка',
+			subtitle: 'с рыбой',
+			desc: {item1: '40 порций', item2: '2 мыши в подарок'},
+			weight: '2',
+			weightkg: 'кг',
+			pic: {src: './img/cat.png', alt: 'Фотография кошки'}
+		},
+		{
+			prev: 'Сказочное заморское яство',
+			title: 'Нямушка',
+			subtitle: 'с курой',
+			desc: {item1: '10 порций', item2: 'мышь в подарок', item3: 'заказчик доволен'},
+			weight: '5',
+			weightkg: 'кг',
+			pic: {src: './img/cat.png', alt: 'Фотография кошки'}
+		}]
+
+mixin card(card)
+	article.card
+		.card__prev-text= card.prev
+		.card__title= card.title
+		.card__subtitle= card.subtitle
+		ul.card__desc
+			li.card__desc-item= card.desc.item1
+			li.card__desc-item= card.desc.item2
+			li.card__desc-item= card.desc.item3
+		.card__icon
+			.card__weight= card.weight
+			.card__weight-kg= card.weightkg
+		img.card__pic(src= card.pic.src alt= card.pic.alt)

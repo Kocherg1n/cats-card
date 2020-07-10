@@ -1,0 +1,11 @@
+extends layouts/default
+include helpers/mixins
+
+block variables
+	- const title = "Some title"
+
+block content
+	.wrapper
+		include ../blocks/modules/products/products
+block scripts
+	script(src="js/main.js")

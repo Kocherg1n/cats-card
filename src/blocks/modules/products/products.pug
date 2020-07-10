@@ -1,0 +1,15 @@
+include ../../components/card/card
+
+section.products
+	.container
+		h1.products__title Ты сегодня покормил кота?
+		ul.products__list
+			each card, index in cards
+				li.products__wrap
+					.products__item(class= index === cards.length - 1 ? 'products--disabled' : '')
+						+card(card)
+					.products__text-buy Чего сидишь? Порадуй котэ,
+						button.products__button купи
+						span.products__dot .
+					.products__text-after-buy Головы щучьи с чесноком да свежайшая сёмгушка.
+					.products__text-ended Печалька, с курой закончился.
